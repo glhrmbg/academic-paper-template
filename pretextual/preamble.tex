@@ -1,0 +1,142 @@
+% ---
+% PACKAGES
+% ---
+
+% ---
+% Fundamental packages 
+% ---
+% \usepackage{lmodern}			% Use Latin Modern font
+\usepackage{ebgaramond}
+\usepackage[T1]{fontenc}		% Font encoding selection
+\usepackage[utf8]{inputenc}		% Document encoding (automatic accent conversion)
+\usepackage{indentfirst}		% Indent the first paragraph of each section
+\usepackage{nomencl} 			% Symbol list
+\usepackage{color}				% Color control
+\usepackage{graphicx}			% Graphics inclusion
+\usepackage{microtype} 			% For justification improvements
+\usepackage{lipsum}				% For dummy text generation
+\usepackage[english,hyperpageref]{backref}	 % Pages with citations in bibliography
+% \usepackage[alf]{abntex2cite}	% ABNT standard citations
+\usepackage[num]{abntex2cite}	% ABNT standard citations
+\citebrackets[]
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage{csquotes}
+\usepackage{makecell}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{booktabs}
+\usepackage{wasysym}
+\usepackage{threeparttable}
+\usepackage[symbol]{footmisc}
+\usepackage{pgfornament}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\pgfplotsset{compat=1.18}
+
+% ---
+% Backref package configuration
+% Used without the hyperpageref option of backref
+\renewcommand{\backrefpagesname}{Cited on page(s):~}
+% Default text before page numbers
+\renewcommand{\backref}{}
+% Define citation texts
+\renewcommand*{\backrefalt}[4]{
+    \ifcase #1 %
+        No citation in text.%
+    \or
+        Cited on page #2.%
+    \else
+        Cited #1 times on pages #2.%
+    \fi}%
+
+% ---
+% Force bibliography title to English
+% ---
+\renewcommand{\bibname}{References}
+\addto\captionsenglish{\renewcommand{\bibname}{References}}
+\addto\captionsbrazil{\renewcommand{\bibname}{References}}
+% ---
+
+% --- Document information for COVER and TITLE PAGE ---
+\titulo{Lorem Ipsum Dolor Sit Amet: Consectetur Adipiscing Elit Research Study
+}
+\tituloestrangeiro{Lorem Ipsum Dolor Sit Amet: Estudo de Pesquisa Consectetur Adipiscing Elit}
+
+\autor{
+    Lorem A. Ipsum$^1$,
+    Dolor B. Sit$^1$,
+    Amet C. Consectetur$^{1,3}$,\\
+    Adipiscing D. Elit$^{1,2}$,
+    Sed E. Do$^{1,2}$,
+    Eiusmod F. Tempor$^{1,2}$
+    \\[0.5cm]
+    $^1$Department of Lorem Ipsum, University of Dolor\\
+    $^2$Institute of Sit Amet, University of Dolor\\
+    $^3$Department of Consectetur, State University\\}
+
+\local{Country}
+\data{}
+% ---
+
+% ---
+% PDF appearance configuration
+
+% Changing blue color aspect
+\definecolor{black}{RGB}{0, 0, 0}
+
+% PDF information
+\makeatletter
+\hypersetup{
+    %pagebackref=true,
+    pdftitle={Lorem Ipsum Template},
+    pdfauthor={Template Authors},
+    pdfsubject={Academic article template with abnTeX2},
+    pdfcreator={LaTeX with abnTeX2},
+    pdfkeywords={template}{latex}{abntex}{abntex2}{lorem ipsum},
+    colorlinks=true,       		% false: boxed links; true: colored links
+    linkcolor=black,          	% color of internal links
+    citecolor=black,        		% color of links to bibliography
+    filecolor=magenta,      		% color of file links
+    urlcolor=black,
+    bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% ---
+% Compile index
+% ---
+\makeindex
+% ---
+
+% ---
+% Change default margins
+% ---
+\setlrmarginsandblock{3cm}{3cm}{*}
+\setulmarginsandblock{3cm}{3cm}{*}
+\checkandfixthelayout
+% ---
+
+% --- 
+% Line and paragraph spacing 
+% --- 
+
+% Line and paragraph spacing
+\setlength{\parindent}{1.3cm} % Paragraph size
+\setlength{\parskip}{0.2cm} % spacing between paragraphs
+
+% Select document language (according to babel packages)
+\selectlanguage{english}
+%\selectlanguage{brazil}
+
+% Remove obsolete extra space between sentences
+\frenchspacing

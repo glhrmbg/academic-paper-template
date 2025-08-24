@@ -1,0 +1,40 @@
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% abnTeX2: Academic Article Template in compliance with
+% ABNT NBR 6022:2018: Information and documentation - Article in 
+% scientific periodical publication - Presentation
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+\documentclass[article, 11pt, oneside, a4paper, english, brazil, sumario=tradicional]{.tex/abntex2}
+\input{pretextual/preamble}
+
+% ----------------------------------------------------------
+% DOCUMENT START
+% ----------------------------------------------------------
+\begin{document}
+\maketitle
+\input{pretextual/abstract}
+
+% ----------------------------------------------------------
+% TEXTUAL ELEMENTS
+% ----------------------------------------------------------
+\textual
+
+\input{chapters/introduction}   % Introduction
+\input{chapters/methodology}    % Materials and Methods
+\input{chapters/results}        % Results and Discussion
+\input{chapters/conclusion}     % Conclusion
+
+% ----------------------------------------------------------
+% POST-TEXTUAL ELEMENTS
+% ----------------------------------------------------------
+\postextual
+\input{chapters/acknowledgements}     % Acknowledgements
+
+% ----------------------------------------------------------
+% Bibliography
+% ----------------------------------------------------------
+\bibliography{reference}
+
+\end{document}
