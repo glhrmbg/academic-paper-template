@@ -30,10 +30,7 @@ An English template for academic papers using the abnTeX2 class, compliant with 
 ├── images/                      # Figure files
 │   └── result-figure-1.jpg      # Figure 1
 ├── .tex/                        # abnTeX2 class files
-│   ├── abntex2.cls
-│   ├── abntex2cite.sty
-│   ├── abntex2abrev.sty
-│   └── [other abnTeX2 files]
+│   └── abntex2.cls
 ├── reference.bib                # Bibliography database
 └── README.md                    # This file
 ```
